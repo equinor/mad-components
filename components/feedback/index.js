@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Text, TextInput, View, SafeAreaView, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import DeviceInfo from 'react-native-device-info';
-import MadButton from '../MadButton';
+import MadButton from '../Button';
 import textStyle from '../../stylesheets/text';
 import Spinner from '../Spinner';
 import * as colors from '../../stylesheets/colors';
@@ -104,7 +103,7 @@ class FeedbackPage extends Component {
       status,
     } = this.state;
     return (
-      <KeyboardAwareScrollView extraScrollHeight={100} style={{ flex: 1 }} >
+      <View extraScrollHeight={100} style={{ flex: 1 }} >
         <SafeAreaView style={{ marginLeft: 42, marginRight: 42, margin: 16, flex: 1 }}>
           {!!statusMessage && (
             <View
@@ -169,7 +168,7 @@ class FeedbackPage extends Component {
             testID="SubmitFeedbackButton"
           />
         </SafeAreaView>
-      </KeyboardAwareScrollView>
+      </View>
     );
   }
 }
